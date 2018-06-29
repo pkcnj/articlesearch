@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="jumbotron" style="background-color: rgb(65, 38, 129) ; color: rgb(196, 193, 212);">
+            <h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i> Search Articles </strong></h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <form role=form>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <label for="searcha">Enter Term:</label>
+                                <input type="text" class="form-control" id="searchTerm" value="" placeholder="Keyword">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+
+
+                    <div class="form-group">
+                        <label for="sDate">Start Date:</label>
+                        <input type="text" class="form-control" id="startDate" placeholder="Start Date">
+                        <small id="HelpBlock" class="form-text text-muted">
+                                    Format: YYYYMMDD
+                                    </small>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+
+                    <div class="form-group">
+                        <label for="eDate">End Date:</label>
+                        <input type="text" class="form-control" id="endDate" placeholder="End Date">
+                        <small id="HelpBlock" class="form-text text-muted">
+                                    Format: YYYYMMDD
+                                    </small>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+
+                    <button type="button" class="btn btn-primary" id="runSearch">Submit</button>
+                    <button type="button" class="btn btn-primary" id="clearAll">Clear</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="myapi.js"></script>
+</body>
+
+</html>
