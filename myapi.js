@@ -3,6 +3,8 @@ const nytUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
 const queryParams = '?api-key=a22ac56558854ddbbc9ce78a8131f4e0&q=';
 
 // Page Components
+
+
 const jsonButton = document.querySelector('#runSearch');
 const aString = document.querySelector('#startDate');
 const bString = document.querySelector('#endDate');
@@ -24,7 +26,9 @@ const runQuery = async() => {
         const response = await fetch(endpoint);
         if (response.ok) {
             const jsonResponse = await response.json();
-            console.log(jsonResponse);
+            const finResponse = jsonResponse.response.docs[0].web_url;
+            console.log(finResponse);
+
         }
     } catch (error) {
         console.log(error);
