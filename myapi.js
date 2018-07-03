@@ -19,15 +19,35 @@ const responseField = document.querySelector('#responseField');
 const runQuery = async() => {
     const wordQuery = inputField.value;
     const yearStart = `${'&begin_date='}${aString.value}`;
-    const yearEnd = `${'&end-date='}${bString.value}`;
+    const yearEnd = `${'&end_date='}${bString.value}`;
 
     const endpoint = `${nytUrl}${queryParams}${wordQuery}${yearStart}${yearEnd}`;
     try {
         const response = await fetch(endpoint);
         if (response.ok) {
             const jsonResponse = await response.json();
-            const finResponse = jsonResponse.response.docs[0].web_url;
-            console.log(finResponse);
+
+
+            let tr;
+            let x;
+
+            for (x in jsonResponse.response.docs) {
+                const body = jsonResponse.response.docs[x].web_url;
+                tr = $('<tr/>');
+
+                tr.append("<td>" + body + "</td>")
+
+                $('#imdb').append(tr);
+
+            };
+
+
+
+
+
+
+
+
 
         }
     } catch (error) {
