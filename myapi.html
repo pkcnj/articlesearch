@@ -18,8 +18,10 @@
 <body>
     <div class="container-fluid">
 
-        <div class="jumbotron" style="background-color: rgb(65, 38, 129) ; color: rgb(196, 193, 212);">
-            <h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i> Search Articles </strong></h1>
+        <div class="jumbotron" style="background-color: rgb(119, 158, 209) ; color: rgb(196, 193, 212);">
+            <h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i> Article Search:  </strong></h1>
+            <h2 class="text-center"><strong><i class="fa fa-newspaper-o"></i> Find New York Times articles from 1851 to the present </strong></h2>
+
         </div>
         <div class="container">
             <div class="row">
@@ -27,10 +29,13 @@
 
                     <form role=form>
                         <div class="form-group">
-                            <div class="form-check">
-                                <label for="searcha">Enter Term:</label>
-                                <input type="text" class="form-control" id="searchTerm" value="" placeholder="Keyword">
-                            </div>
+
+                            <label for="searcha">Enter Term:</label>
+                            <input type="text" class="form-control" id="searchTerm" value="" placeholder="Keyword" required>
+                            <small id="HelpBlock" class="form-text text-muted">
+                                        Searches article text, headline and byline
+                                        </small>
+
                         </div>
                     </form>
 
@@ -43,7 +48,7 @@
 
                     <div class="form-group">
                         <label for="sDate">Start Date:</label>
-                        <input type="text" class="form-control" id="startDate" placeholder="Start Date">
+                        <input type="text" class="form-control" id="startDate" placeholder="Start Date" required>
                         <small id="HelpBlock" class="form-text text-muted">
                                     Format: YYYYMMDD
                                     </small>
@@ -58,7 +63,7 @@
 
                     <div class="form-group">
                         <label for="eDate">End Date:</label>
-                        <input type="text" class="form-control" id="endDate" placeholder="End Date">
+                        <input type="text" class="form-control" id="endDate" placeholder="End Date" required>
                         <small id="HelpBlock" class="form-text text-muted">
                                     Format: YYYYMMDD
                                     </small>

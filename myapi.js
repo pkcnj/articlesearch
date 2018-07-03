@@ -33,9 +33,14 @@ const runQuery = async() => {
 
             for (x in jsonResponse.response.docs) {
                 const body = jsonResponse.response.docs[x].web_url;
+                const headline = jsonResponse.response.docs[x].headline.main;
+                const snippet = jsonResponse.response.docs[x].snippet;
+                const dateArticle = jsonResponse.response.docs[x].pub_date;
+                const author = jsonResponse.response.docs[x].byline.original;
                 tr = $('<tr/>');
 
-                tr.append("<td>" + body + "</td>")
+                tr.append("<td>" + "<h4>" + headline + "</h4>" + "<br />" + author + "<br />" + dateArticle + "<br />" + "<a href='" + body + "'>" + body + "</a>" + "<br />" + snippet + "</td>")
+
 
                 $('#imdb').append(tr);
 
@@ -56,3 +61,7 @@ const runQuery = async() => {
 }
 
 jsonButton.addEventListener('click', runQuery);
+$('#clearAll').on('click', function() {
+
+    $("#imdb").empty();
+})
